@@ -36,7 +36,10 @@ app.get("/get-user", (req: Request, res: Response) => {
 
 app.post("/login", (req: Request, res: Response) => {
   console.log(req.body);
-  res.send("OK");
+  res.json({
+    status: 200,
+    message: "OK!",
+  });
 });
 
 app.listen(port, () => {
