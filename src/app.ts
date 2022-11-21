@@ -1,14 +1,13 @@
 import express from "express";
-import { Application } from "express";
+import { Express } from "express";
 import * as bodyParser from "body-parser";
 import { MainRouter } from "./routes";
 import { loadErrorHandlers } from "./utils/error-handling";
 import helmet from "helmet";
 import compression from "compression";
 import "./database"; // initialize database
-import "./utilities/passport";
 
-const app: Application = express();
+const app: Express = express();
 
 app.use(helmet());
 app.use(compression());

@@ -11,6 +11,9 @@ export function loadErrorHandlers(app: Application) {
 
     const err: BetterError = new Error("Not Found");
     err.status = 404;
+
+    logger.error(err);
+
     next(err);
   });
 
